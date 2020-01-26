@@ -1,0 +1,90 @@
+
+.material-icons{
+font-size: 24px;
+}
+body{
+  background-image: url("https://news.cgtn.com/news/3d3d674d356b544f31457a6333566d54/img/d4dea08fc9f64b53aa1dd41070d9383b/d4dea08fc9f64b53aa1dd41070d9383b.jpg");
+  background-size:100%;
+ 
+}
+.form {
+    margin: 5% 35%;
+    padding: 80px 0;
+    text-align: center;
+    background: #50a3a2;
+  }
+  .order{
+    background-color: "red";
+  }
+  
+  .form h5 {
+    color : red;
+  }
+  
+  form {
+    padding: 20px 20px;
+    position: relative;
+    
+  }
+  form input {
+    border: 1px solid rgba(252, 252, 252, 0.4);
+    background-color: rgba(252, 252, 252, 0.2);
+    width: 250px;
+    border-radius: 3px;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+  }  
+  form button {
+    appearance: none;
+    outline: 0;
+    background-color: white;
+    border: 0;
+    padding: 10px 15px;
+    color: #50a3a2;
+    border-radius: 3px;
+    width: 250px;
+    display: block;
+    margin: 0 auto 10px auto;
+    font-size: 18px;
+  }
+  .input-group {
+    width: 30%;
+    text-align: left;
+    margin: auto ;
+  }
+  .form-row{
+    width: 30%;
+    text-align: left;
+    margin: auto ;
+  }
+  .order{
+    text-align: center;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+  font-family: 'PT Serif', serif;
+}
+li, p{ 
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.container{
+  max-width: 100%;
+  
+}
+
