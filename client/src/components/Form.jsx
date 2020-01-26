@@ -20,7 +20,7 @@ function Form(props) {
   
     function login(event){
         
-        axios.post("http://localhost:5000/login",inputText)
+        axios.post("/login",inputText)
         .then(res=> 
             props.login(res.data,inputText.username)
         //console.log(res.data) 
