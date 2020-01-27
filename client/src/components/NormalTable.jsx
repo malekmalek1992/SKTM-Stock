@@ -7,7 +7,7 @@ function NormalTable(props){
 useEffect(() => {
   const fetchData = async () => {
     const result = await axios.get(
-      'http://localhost:5000/'+props.plant+'/get',
+      '/'+props.plant+'/get',
     );
     setTableItem(result.data);
   };

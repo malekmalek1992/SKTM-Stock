@@ -37,7 +37,7 @@ function Form(props) {
     }
     function register(event){
     //console.log(inputText)
-    axios.post("http://localhost:5000/register",inputText)
+    axios.post("/register",inputText)
     .then(res=>{
         setIsEmployee(res.data)
         props.register(res.data)}

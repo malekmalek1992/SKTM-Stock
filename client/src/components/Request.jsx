@@ -8,7 +8,7 @@ function Request(props){
     useEffect(() => {
         const fetchData = async () => {
           const result = await axios.get(
-            'http://localhost:5000/'+plantName+'/order',
+            '/'+plantName+'/order',
           );
           setOrders(result.data);
         };
@@ -80,7 +80,7 @@ editable={{
     onRowDelete: oldData =>
     new Promise((resolve) => {
         setTimeout(() => {
-                axios.post("http://localhost:5000/"+plantName+"/deleteOrder",oldData)
+                axios.post("/"+plantName+"/deleteOrder",oldData)
                .then(res=> 
                 setOrders(res.data))
             resolve();

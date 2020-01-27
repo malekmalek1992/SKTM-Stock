@@ -13,7 +13,7 @@ function AddDelete (){
         const newUser ={
             name:employeeID
         }
-        axios.post("http://localhost:5000/add",newUser)
+        axios.post("/add",newUser)
        .then(res=>
          setIsExiste(res.data)
          )
@@ -28,7 +28,7 @@ function AddDelete (){
         const user ={
             name:userID
         }
-        axios.post("http://localhost:5000/userDelete",user)
+        axios.post("/userDelete",user)
        .then(res=>
          console.log(res.data)
          )

@@ -11,7 +11,7 @@ const plantName= props.plant;
 useEffect(() => {
   const fetchData = async () => {
     const result = await axios.get(
-      'http://localhost:5000/'+plantName+'/get', 
+      '/'+plantName+'/get', 
     );
     setTableItem(result.data);
   };
@@ -91,7 +91,7 @@ editable={{
   onRowAdd: newData =>
   new Promise(resolve => {
     setTimeout(() => {
-       axios.post("http://localhost:5000/"+plantName+"/add",newData)
+       axios.post("/"+plantName+"/add",newData)
        .then(res=>
          setTableItem(prevTable =>{
              return [...prevTable,res.data]
@@ -107,7 +107,7 @@ editable={{
     setTimeout(() => {
       resolve();
       if (oldData) {
-          axios.post("http://localhost:5000/"+plantName+"/update",newData)
+          axios.post("/"+plantName+"/update",newData)
          .then(res=>
                setTableItem(res.data))
       }
@@ -116,7 +116,7 @@ editable={{
   onRowDelete: oldData =>
     new Promise((resolve) => {
         setTimeout(() => {
-                axios.post("http://localhost:5000/"+plantName+"/delete",oldData)
+                axios.post("/"+plantName+"/delete",oldData)
                .then(res=> 
                setTableItem(res.data))
             resolve();

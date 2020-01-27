@@ -8,7 +8,7 @@ function NavBar(props){
     password:""
 }
   function handlClick(){
-    axios.get("http://localhost:5000/logout")
+    axios.get("/logout")
     .then(res => props.logout(res.data,user))
   }
     return (

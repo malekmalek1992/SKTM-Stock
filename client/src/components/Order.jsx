@@ -44,7 +44,7 @@ function Order(props){
           quantity:itemsName.quantity3
         },
      }
-     axios.post("http://localhost:5000/order",order)
+     axios.post("/order",order)
      .then(res=>
      setIsSubmitted(res.data));
      setItemsName({
