@@ -20,6 +20,9 @@ function Request(props){
       }
       const theme = createMuiTheme({
         overrides: {
+          rowStyle: rowData => ({
+            backgroundColor: (rowData.tableData.id % 2) ? '#fbe3b9' : '#FFF'
+            }),
           MuiTypography:{
             caption:{
               fontSize: "1.5rem",
