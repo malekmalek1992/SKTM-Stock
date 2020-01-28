@@ -16,6 +16,11 @@ useEffect(() => {
 }, []);
     const theme = createMuiTheme({
         overrides: {
+          MuiTypography:{
+            caption:{
+              fontSize: "1.5rem",
+            }
+          },
           MuiTablePagination: {
             toolbar: {
               
@@ -62,14 +67,17 @@ return <div>
           cellStyle:{
             fontSize: "1.5rem"
           },
-          rowStyle: {
-            backgroundColor: "#EEE",
-          },
+          rowStyle: rowData => ({
+                   backgroundColor: (rowData.tableData.id % 2) ? '#fbe3b9' : '#FFF'
+          }),
           searchFieldStyle:{
             fontSize: "1.5rem"
-          }
+          },
+        }}
+        components={{
+    }}
         
-        }}/>
+        />
  </ThemeProvider>
  </div>
     

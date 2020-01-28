@@ -27,10 +27,17 @@ function handlClick(){
 }
 const theme = createMuiTheme({
     overrides: {
+      MuiTypography:{
+        caption:{
+          fontSize: "1.5rem",
+        }
+      },
       MuiTablePagination: {
         toolbar: { 
-          fontSize: "1.5rem"
+          fontSize: "1.5rem",
+         
         },
+        
         selectIcon:{
           width: "18px !important",
           height: "18px !important"
@@ -40,11 +47,16 @@ const theme = createMuiTheme({
         },
         actions:{
           backgroundColor:"red",
-          fontSize:"1.5rem"
+          fontSize:"1.5rem",
+          caption: {
+            color: "red",
+            fontSize: "20px"
+          },
         }
       }
     }
   });
+  
 return  <div className="container">
   <Router>
   <Link onClick={handlClick} role="button" to="/request" style={{color:"black",fontSize:"2.25rem"}}>Show Orders List</Link>
@@ -75,17 +87,20 @@ options={{
     fontSize: "1.5rem",
     position: 'sticky', top: 0
   },
+  addRowPosition: 'first',
   maxBodyHeight: '650px',
   cellStyle:{
     fontSize: "1.5rem"
   },
-  rowStyle: {
-    backgroundColor:"#EEE",
-  },
+  rowStyle: rowData => ({
+     backgroundColor: (rowData.tableData.id % 2) ? '#fbe3b9' : '#FFF',
+}),
   searchFieldStyle:{
     fontSize: "1.5rem"
   }
 
+}}
+components={{
 }}
 editable={{ 
   onRowAdd: newData =>

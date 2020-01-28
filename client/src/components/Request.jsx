@@ -20,6 +20,11 @@ function Request(props){
       }
       const theme = createMuiTheme({
         overrides: {
+          MuiTypography:{
+            caption:{
+              fontSize: "1.5rem",
+            }
+          },
           MuiTablePagination: {
             toolbar: { 
               fontSize: "1.5rem"
